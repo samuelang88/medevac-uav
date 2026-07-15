@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MEDEVAC UAV — Autonomous Long-Endurance Drone Services for Industry & Healthcare</title>
+<meta name="description" content="MEDEVAC UAV provides autonomous long-endurance drone services for pipeline inspection, medical logistics, agriculture NDVI, and disaster response. 350 km range, $6.27/flight cost, IPX5 all-weather certified.">
+<meta name="keywords" content="drone services, pipeline inspection, medical drone delivery, agriculture NDVI, disaster response, BVLOS drone, long-endurance UAV, Singapore drone service">
+<meta name="author" content="MEDEVAC UAV">
+<meta property="og:title" content="MEDEVAC UAV — Autonomous Drone Services">
+<meta property="og:description" content="Long-endurance drone services for industry and healthcare. 350 km range. $6.27/flight. IPX5 all-weather.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://medevacuav.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MEDEVAC UAV — Autonomous Drone Services">
+<meta name="twitter:description" content="Long-endurance drone services for industry and healthcare. 350 km range. $6.27/flight. IPX5 all-weather.">
+<link rel="canonical" href="https://medevacuav.com">
+<style>
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: #0a0e17;
+  color: #e0e4ed;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Typography ===== */
+h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); margin-bottom: 1rem; }
+h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+p { margin-bottom: 1rem; color: #94a3b8; }
+a { color: #60a5fa; text-decoration: none; transition: color 0.2s; }
+a:hover { color: #93c5fd; }
+
+/* ===== Container ===== */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ===== Navbar ===== */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 14, 23, 0.92); backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+nav .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+nav .logo { font-weight: 800; font-size: 1.2rem; color: #f1f5f9; letter-spacing: 0.02em; }
+nav .logo span { color: #3b82f6; }
+nav .nav-links { display: flex; gap: 2rem; list-style: none; }
+nav .nav-links a { font-size: 0.875rem; font-weight: 500; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.06em; transition: color 0.2s; }
+nav .nav-links a:hover { color: #f1f5f9; }
+
+/* ===== Hero ===== */
+.hero {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(160deg, #0a0e17 0%, #111827 40%, #0f172a 70%, #0a0e17 100%);
+  position: relative; overflow: hidden;
+  padding: 6rem 0 4rem;
+}
+.hero::before {
+  content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(ellipse at 30% 50%, rgba(59,130,246,0.06) 0%, transparent 50%),
+              radial-gradient(ellipse at 70% 50%, rgba(99,102,241,0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero .container { position: relative; z-index: 1; text-align: center; }
+.hero h1 { margin-bottom: 0.75rem; }
+.hero h1 span { color: #3b82f6; }
+.hero .tagline { font-size: clamp(1rem, 2vw, 1.25rem); color: #64748b; max-width: 680px; margin: 0 auto 2rem; font-weight: 400; }
+.hero-stats {
+  display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-top: 2.5rem;
+}
+.hero-stat { text-align: center; }
+.hero-stat .num { font-size: 2rem; font-weight: 800; color: #f1f5f9; }
+.hero-stat .label { font-size: 0.8rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.25rem; }
+
+/* ===== Button ===== */
+.btn {
+  display: inline-block; padding: 0.85rem 2.25rem; border-radius: 8px;
+  font-weight: 600; font-size: 0.95rem; transition: all 0.25s; cursor: pointer;
+  border: none; text-decoration: none;
+}
+.btn-primary { background: #3b82f6; color: #fff; }
+.btn-primary:hover { background: #2563eb; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(59,130,246,0.3); }
+.btn-outline { background: transparent; color: #e0e4ed; border: 1px solid rgba(255,255,255,0.15); }
+.btn-outline:hover { border-color: #3b82f6; color: #60a5fa; transform: translateY(-1px); }
+
+/* ===== Section Common ===== */
+section { padding: 5rem 0; }
+.section-label {
+  font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: #3b82f6;
+  font-weight: 600; margin-bottom: 0.75rem;
+}
+section h2 { color: #f1f5f9; }
+section p.section-desc { font-size: 1.1rem; color: #64748b; max-width: 600px; margin-bottom: 3rem; }
+
+/* ===== Key Numbers Section ===== */
+#numbers { background: linear-gradient(180deg, #0f172a 0%, #0a0e17 100%); border-top: 1px solid rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.04); }
+.numbers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+.number-card { text-align: center; padding: 2rem 1rem; }
+.number-card .num { font-size: 2.5rem; font-weight: 800; color: #3b82f6; margin-bottom: 0.5rem; line-height: 1; }
+.number-card .num sup { font-size: 1rem; font-weight: 600; color: #64748b; }
+.number-card p { font-size: 0.85rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* ===== Services Section ===== */
+#services { background: #0f172a; }
+.services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.service-card {
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px; padding: 2rem; transition: all 0.25s;
+}
+.service-card:hover { border-color: rgba(59,130,246,0.3); background: rgba(59,130,246,0.04); transform: translateY(-2px); }
+.service-card .icon { font-size: 1.75rem; margin-bottom: 1rem; display: block; }
+.service-card h3 { color: #f1f5f9; }
+.service-card p { font-size: 0.9rem; color: #94a3b8; margin-bottom: 1rem; }
+.service-card ul { list-style: none; }
+.service-card ul li { font-size: 0.85rem; color: #64748b; padding: 0.3rem 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; justify-content: space-between; }
+.service-card ul li:last-child { border-bottom: none; }
+.service-card ul li .val { color: #e0e4ed; font-weight: 600; }
+.service-card .price-range { font-size: 0.85rem; color: #3b82f6; font-weight: 700; margin-top: 0.75rem; }
+
+/* ===== Platforms Section ===== */
+#platforms { background: #0a0e17; }
+.platforms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.platform-card {
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px; padding: 2.5rem; transition: all 0.25s;
+}
+.platform-card.featured { border-color: rgba(59,130,246,0.3); background: rgba(59,130,246,0.04); position: relative; }
+.platform-card.featured::before {
+  content: 'NEW'; position: absolute; top: -0.75rem; right: 1.5rem;
+  background: #3b82f6; color: #fff; font-size: 0.7rem; font-weight: 700;
+  padding: 0.25rem 0.75rem; border-radius: 4px; letter-spacing: 0.06em;
+}
+.platform-card .platform-name { font-size: 1.5rem; font-weight: 700; color: #f1f5f9; margin-bottom: 0.25rem; }
+.platform-card .platform-sub { font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem; }
+.platform-specs { list-style: none; }
+.platform-specs li {
+  display: flex; justify-content: space-between; padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 0.9rem;
+}
+.platform-specs li:last-child { border-bottom: none; }
+.platform-specs li .spec-label { color: #64748b; }
+.platform-specs li .spec-val { color: #e0e4ed; font-weight: 600; }
+.platform-card .best-for { margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.85rem; color: #64748b; }
+
+/* ===== Contact Section ===== */
+#contact { background: #0f172a; border-top: 1px solid rgba(255,255,255,0.04); }
+.contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+.contact-info h3 { color: #f1f5f9; margin-bottom: 1rem; }
+.contact-info p { color: #94a3b8; font-size: 0.95rem; }
+.contact-info .detail { margin-top: 1.5rem; }
+.contact-info .detail strong { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: #64748b; margin-bottom: 0.25rem; }
+.contact-info .detail span { color: #e0e4ed; font-size: 0.95rem; }
+.contact-form { display: flex; flex-direction: column; gap: 1rem; }
+.contact-form input, .contact-form textarea {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px; padding: 0.85rem 1rem; font-family: inherit; font-size: 0.95rem;
+  color: #e0e4ed; outline: none; transition: border-color 0.2s;
+}
+.contact-form input:focus, .contact-form textarea:focus { border-color: #3b82f6; }
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: #475569; }
+.contact-form textarea { min-height: 120px; resize: vertical; }
+
+/* ===== Footer ===== */
+footer {
+  background: #0a0e17; border-top: 1px solid rgba(255,255,255,0.04); padding: 2rem 0;
+  text-align: center; font-size: 0.8rem; color: #475569;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  nav .nav-links { display: none; }
+  .numbers-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .platforms-grid { grid-template-columns: 1fr; }
+  .contact-wrap { grid-template-columns: 1fr; }
+  .hero-stats { gap: 1.5rem; }
+}
+@media (max-width: 480px) {
+  .numbers-grid { grid-template-columns: 1fr 1fr; }
+  .hero-stat .num { font-size: 1.5rem; }
+  section { padding: 3rem 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Nav ===== -->
+<nav>
+  <div class="container">
+    <div class="logo">MEDEVAC<span>UAV</span></div>
+    <ul class="nav-links">
+      <li><a href="#numbers">By the Numbers</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#platforms">Platforms</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="home">
+  <div class="container">
+    <h1>MEDEVAC <span>UAV</span></h1>
+    <p class="tagline">Autonomous Long-Endurance Drone Services for Industry &amp; Healthcare</p>
+    <div style="display:flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="#services" class="btn btn-primary">Explore Services</a>
+      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">350 km</div><div class="label">Single-Flight Range</div></div>
+      <div class="hero-stat"><div class="num">$6.27</div><div class="label">Per-Flight Cost</div></div>
+      <div class="hero-stat"><div class="num">15&times;</div><div class="label">Cheaper vs Competition</div></div>
+      <div class="hero-stat"><div class="num">IPX5</div><div class="label">All-Weather Certified</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Key Numbers ===== -->
+<section id="numbers">
+  <div class="container">
+    <div class="numbers-grid">
+      <div class="number-card">
+        <div class="num">1,761</div>
+        <p>km max range <br><span style="color:#64748b;text-transform:none;letter-spacing:0">X3 V2 inter-island</span></p>
+      </div>
+      <div class="number-card">
+        <div class="num">5</div>
+        <p>kg payload <br><span style="color:#64748b;text-transform:none;letter-spacing:0">temperature-controlled</span></p>
+      </div>
+      <div class="number-card">
+        <div class="num">24</div>
+        <p>hour endurance <br><span style="color:#64748b;text-transform:none;letter-spacing:0">X2 daily ops</span></p>
+      </div>
+      <div class="number-card">
+        <div class="num">90%</div>
+        <p>cost savings <br><span style="color:#64748b;text-transform:none;letter-spacing:0">vs helicopter &amp; fixed-wing</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Services ===== -->
+<section id="services">
+  <div class="container">
+    <p class="section-label">What We Do</p>
+    <h2>Industrial &amp; Medical Drone Services</h2>
+    <p class="section-desc">Purpose-built drone platforms delivering reliable, cost-effective aerial services across four verticals.</p>
+    <div class="services-grid">
+
+      <!-- Pipeline Inspection -->
+      <div class="service-card">
+        <span class="icon">&#9881;</span>
+        <h3>Pipeline Inspection</h3>
+        <p>RGB orthophoto mosaics, thermal anomaly detection, and LiDAR surveys for oil &amp; gas, water, and transmission pipelines.</p>
+        <ul>
+          <li>Coverage per flight <span class="val">240 km</span></li>
+          <li>Sensors <span class="val">RGB &bull; Thermal &bull; LiDAR</span></li>
+          <li>Deliverables <span class="val">Ortho + Report</span></li>
+          <li>Inspection cadence <span class="val">Quarterly / Monthly</span></li>
+        </ul>
+        <div class="price-range">$50 &ndash; $300 / km</div>
+      </div>
+
+      <!-- Medical Logistics -->
+      <div class="service-card">
+        <span class="icon">&#10010;</span>
+        <h3>Medical Logistics</h3>
+        <p>Cold-chain same-day delivery of blood products, lab samples, organs, and emergency medicines between hospitals and labs.</p>
+        <ul>
+          <li>Temperature control <span class="val">Active 2&ndash;8 &deg;C</span></li>
+          <li>Chain of custody <span class="val">GPS + Temp log</span></li>
+          <li>Max payload (X2) <span class="val">2 kg</span></li>
+          <li>Max payload (X3 V2) <span class="val">5 kg</span></li>
+        </ul>
+        <div class="price-range">$60 &ndash; $2,000 / delivery</div>
+      </div>
+
+      <!-- Agriculture NDVI -->
+      <div class="service-card">
+        <span class="icon">&#127807;</span>
+        <h3>Agriculture NDVI</h3>
+        <p>Multi-spectral crop health mapping, yield prediction, and precision agriculture data for estates of 1,000 ha and above.</p>
+        <ul>
+          <li>Data layers per pass <span class="val">3 (X2)</span></li>
+          <li>Coverage per flight <span class="val">2,000 ha</span></li>
+          <li>Minimum estate <span class="val">1,000 ha</span></li>
+          <li>Annual subscription <span class="val">12 monthly passes</span></li>
+        </ul>
+        <div class="price-range">$0.50 &ndash; $2.00 / ha</div>
+      </div>
+
+      <!-- Disaster Response -->
+      <div class="service-card">
+        <span class="icon">&#9888;</span>
+        <h3>Disaster Response</h3>
+        <p>Retainer-based rapid deployment for emergency assessment, communications relay, and medical supply delivery during disasters.</p>
+        <ul>
+          <li>Coverage radius <span class="val">880 km</span></li>
+          <li>Activation time <span class="val">&lt; 30 minutes</span></li>
+          <li>Weather rating <span class="val">IPX5 (all weather)</span></li>
+          <li>Fleet size per retainer <span class="val">2&ndash;5 units</span></li>
+        </ul>
+        <div class="price-range">Retainer + Activation fee</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== Platforms ===== -->
+<section id="platforms">
+  <div class="container">
+    <p class="section-label">Our Platforms</p>
+    <h2>Engineered for Endurance</h2>
+    <p class="section-desc">Two purpose-built platforms covering every mission profile from daily urban logistics to inter-island all-weather flights.</p>
+    <div class="platforms-grid">
+
+      <!-- X2 -->
+      <div class="platform-card">
+        <div class="platform-name">X2</div>
+        <div class="platform-sub">Daily Operations Workhorse</div>
+        <ul class="platform-specs">
+          <li><span class="spec-label">Range (30% reserve)</span><span class="spec-val">350 km</span></li>
+          <li><span class="spec-label">Endurance</span><span class="spec-val">24 hours</span></li>
+          <li><span class="spec-label">Payload</span><span class="spec-val">2 kg</span></li>
+          <li><span class="spec-label">Operating cost</span><span class="spec-val">$6.27 / flight</span></li>
+          <li><span class="spec-label">Weather rating</span><span class="spec-val">IPX4</span></li>
+          <li><span class="spec-label">BOM per unit</span><span class="spec-val">$1,743</span></li>
+        </ul>
+        <div class="best-for"><strong>Best for:</strong> Short-haul daily logistics, urban medical delivery, pipeline/transmission inspection</div>
+      </div>
+
+      <!-- X3 V2 -->
+      <div class="platform-card featured">
+        <div class="platform-name">X3 V2</div>
+        <div class="platform-sub">Inter-Island / All-Weather Expansion Platform</div>
+        <ul class="platform-specs">
+          <li><span class="spec-label">Range (30% reserve)</span><span class="spec-val">1,761 km</span></li>
+          <li><span class="spec-label">Endurance</span><span class="spec-val">27+ hours</span></li>
+          <li><span class="spec-label">Payload</span><span class="spec-val">5 kg</span></li>
+          <li><span class="spec-label">Operating cost</span><span class="spec-val">$1.42 / km</span></li>
+          <li><span class="spec-label">Weather rating</span><span class="spec-val">IPX5 (all-weather)</span></li>
+          <li><span class="spec-label">BOM per unit</span><span class="spec-val">$2,124</span></li>
+        </ul>
+        <div class="best-for"><strong>Best for:</strong> Inter-island, cross-border, offshore platform supply, disaster response, tropical monsoon ops</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section id="contact">
+  <div class="container">
+    <p class="section-label">Get in Touch</p>
+    <h2>Ready to Fly?</h2>
+    <p class="section-desc">Let's discuss how MEDEVAC UAV can transform your logistics, inspection, or survey operations.</p>
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <h3>Contact Us</h3>
+        <p>We respond to all inquiries within 24 hours. For urgent operational needs, please indicate in your message.</p>
+        <div class="detail">
+          <strong>Email</strong>
+          <span><a href="mailto:samuelang88@gmail.com">samuelang88@gmail.com</a></span>
+        </div>
+        <div class="detail">
+          <strong>Phone</strong>
+          <span>+65 [coming soon]</span>
+        </div>
+        <div class="detail">
+          <strong>Services</strong>
+          <span>Pipeline &bull; Medical &bull; Agriculture &bull; Disaster Response</span>
+        </div>
+      </div>
+      <form class="contact-form" action="mailto:samuelang88@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="container">
+    <p>&copy; 2024&ndash;2026 MEDEVAC UAV. All rights reserved. Built in Singapore.</p>
+  </div>
+</footer>
+
+</body>
+</html>
