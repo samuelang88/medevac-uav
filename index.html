@@ -9,11 +9,13 @@
 <meta name="author" content="MEDEVAC UAV">
 <meta property="og:title" content="MEDEVAC UAV — Autonomous Drone Services">
 <meta property="og:description" content="Long-endurance drone services for industry and healthcare. 350 km range. $6.27/flight. IPX5 all-weather.">
+<meta property="og:image" content="https://samuelang88.github.io/medevac-uav/images/x2_hero_render.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://medevacuav.com">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MEDEVAC UAV — Autonomous Drone Services">
 <meta name="twitter:description" content="Long-endurance drone services for industry and healthcare. 350 km range. $6.27/flight. IPX5 all-weather.">
+<meta name="twitter:image" content="https://samuelang88.github.io/medevac-uav/images/x2_hero_render.png">
 <link rel="canonical" href="https://medevacuav.com">
 <style>
 /* ===== Reset & Base ===== */
@@ -55,26 +57,27 @@ nav .nav-links a:hover { color: #f1f5f9; }
 /* ===== Hero ===== */
 .hero {
   min-height: 100vh; display: flex; align-items: center; justify-content: center;
-  background: linear-gradient(160deg, #0a0e17 0%, #111827 40%, #0f172a 70%, #0a0e17 100%);
   position: relative; overflow: hidden;
   padding: 6rem 0 4rem;
 }
-.hero::before {
-  content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
-  background: radial-gradient(ellipse at 30% 50%, rgba(59,130,246,0.06) 0%, transparent 50%),
-              radial-gradient(ellipse at 70% 50%, rgba(99,102,241,0.04) 0%, transparent 50%);
-  pointer-events: none;
+.hero-bg {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: url('images/x2_hero_render.png') center center / cover no-repeat;
+}
+.hero-bg::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(160deg, rgba(10,14,23,0.85) 0%, rgba(10,14,23,0.50) 40%, rgba(15,23,42,0.60) 70%, rgba(10,14,23,0.95) 100%);
 }
 .hero .container { position: relative; z-index: 1; text-align: center; }
 .hero h1 { margin-bottom: 0.75rem; }
 .hero h1 span { color: #3b82f6; }
-.hero .tagline { font-size: clamp(1rem, 2vw, 1.25rem); color: #64748b; max-width: 680px; margin: 0 auto 2rem; font-weight: 400; }
+.hero .tagline { font-size: clamp(1rem, 2vw, 1.25rem); color: #94a3b8; max-width: 680px; margin: 0 auto 2rem; font-weight: 400; }
 .hero-stats {
   display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-top: 2.5rem;
 }
 .hero-stat { text-align: center; }
 .hero-stat .num { font-size: 2rem; font-weight: 800; color: #f1f5f9; }
-.hero-stat .label { font-size: 0.8rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.25rem; }
+.hero-stat .label { font-size: 0.8rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.25rem; }
 
 /* ===== Button ===== */
 .btn {
@@ -94,7 +97,7 @@ section { padding: 5rem 0; }
   font-weight: 600; margin-bottom: 0.75rem;
 }
 section h2 { color: #f1f5f9; }
-section p.section-desc { font-size: 1.1rem; color: #64748b; max-width: 600px; margin-bottom: 3rem; }
+section p.section-desc { font-size: 1.1rem; color: #94a3b8; max-width: 600px; margin-bottom: 3rem; }
 
 /* ===== Key Numbers Section ===== */
 #numbers { background: linear-gradient(180deg, #0f172a 0%, #0a0e17 100%); border-top: 1px solid rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.04); }
@@ -103,6 +106,35 @@ section p.section-desc { font-size: 1.1rem; color: #64748b; max-width: 600px; ma
 .number-card .num { font-size: 2.5rem; font-weight: 800; color: #3b82f6; margin-bottom: 0.5rem; line-height: 1; }
 .number-card .num sup { font-size: 1rem; font-weight: 600; color: #64748b; }
 .number-card p { font-size: 0.85rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* ===== Drone Showcase Section ===== */
+#drones { background: #0a0e17; }
+.drones-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.drone-card {
+  background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px; overflow: hidden; transition: all 0.35s;
+}
+.drone-card:hover { border-color: rgba(59,130,246,0.35); transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.4); }
+.drone-card .drone-img {
+  width: 100%; height: 280px; object-fit: cover; display: block;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.drone-card .drone-body { padding: 1.5rem 2rem 2rem; }
+.drone-card .drone-name { font-size: 1.4rem; font-weight: 700; color: #f1f5f9; margin-bottom: 0.25rem; }
+.drone-card .drone-sub { font-size: 0.85rem; color: #64748b; margin-bottom: 1rem; }
+.drone-specs { list-style: none; }
+.drone-specs li {
+  display: flex; justify-content: space-between; padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 0.9rem;
+}
+.drone-specs li:last-child { border-bottom: none; }
+.drone-specs li .spec-label { color: #64748b; }
+.drone-specs li .spec-val { color: #e0e4ed; font-weight: 600; }
+.drone-badge {
+  display: inline-block; background: rgba(59,130,246,0.12); color: #60a5fa;
+  font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 4px;
+  letter-spacing: 0.05em; text-transform: uppercase; margin-top: 0.75rem;
+}
 
 /* ===== Services Section ===== */
 #services { background: #0f172a; }
@@ -174,15 +206,18 @@ footer {
 @media (max-width: 768px) {
   nav .nav-links { display: none; }
   .numbers-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .drones-grid { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr; }
   .platforms-grid { grid-template-columns: 1fr; }
   .contact-wrap { grid-template-columns: 1fr; }
   .hero-stats { gap: 1.5rem; }
+  .drone-card .drone-img { height: 200px; }
 }
 @media (max-width: 480px) {
   .numbers-grid { grid-template-columns: 1fr 1fr; }
   .hero-stat .num { font-size: 1.5rem; }
   section { padding: 3rem 0; }
+  .drone-card .drone-img { height: 180px; }
 }
 </style>
 </head>
@@ -194,6 +229,7 @@ footer {
     <div class="logo">MEDEVAC<span>UAV</span></div>
     <ul class="nav-links">
       <li><a href="#numbers">By the Numbers</a></li>
+      <li><a href="#drones">Our Fleet</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#platforms">Platforms</a></li>
       <li><a href="pitch-deck.html" style="color:#3b82f6; font-weight:600;">Investor Deck</a></li>
@@ -204,11 +240,12 @@ footer {
 
 <!-- ===== Hero ===== -->
 <section class="hero" id="home">
+  <div class="hero-bg"></div>
   <div class="container">
     <h1>MEDEVAC <span>UAV</span></h1>
     <p class="tagline">Autonomous Long-Endurance Drone Services for Industry &amp; Healthcare</p>
     <div style="display:flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-      <a href="#services" class="btn btn-primary">Explore Services</a>
+      <a href="#drones" class="btn btn-primary">Meet Our Drones</a>
       <a href="pitch-deck.html" class="btn btn-outline" style="border-color:#3b82f6; color:#60a5fa;">View Investor Deck</a>
       <a href="#contact" class="btn btn-outline">Get in Touch</a>
     </div>
@@ -241,6 +278,52 @@ footer {
         <div class="num">90%</div>
         <p>cost savings <br><span style="color:#64748b;text-transform:none;letter-spacing:0">vs helicopter &amp; fixed-wing</span></p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Our Fleet ===== -->
+<section id="drones">
+  <div class="container">
+    <p class="section-label">Our Fleet</p>
+    <h2>Purpose-Built for Every Mission</h2>
+    <p class="section-desc">Two drone platforms engineered from the ground up for endurance, payload, and all-weather reliability across industrial and medical operations.</p>
+    <div class="drones-grid">
+
+      <!-- X2 Pipeline Inspection Drone -->
+      <div class="drone-card">
+        <img class="drone-img" src="images/x2_pipeline_render.png" alt="X2 Pipeline Inspection Drone in flight" loading="lazy">
+        <div class="drone-body">
+          <div class="drone-name">X2</div>
+          <div class="drone-sub">Daily Operations &bull; Pipeline Inspection</div>
+          <ul class="drone-specs">
+            <li><span class="spec-label">Flight range (30% reserve)</span><span class="spec-val">350 km</span></li>
+            <li><span class="spec-label">Endurance</span><span class="spec-val">24 hours</span></li>
+            <li><span class="spec-label">Max payload</span><span class="spec-val">2 kg</span></li>
+            <li><span class="spec-label">Operating cost</span><span class="spec-val">$6.27 / flight</span></li>
+            <li><span class="spec-label">Weather rating</span><span class="spec-val">IPX4</span></li>
+          </ul>
+          <div class="drone-badge">Pipeline inspection &bull; Urban medical delivery</div>
+        </div>
+      </div>
+
+      <!-- X3 V2 Medical Logistics Drone -->
+      <div class="drone-card">
+        <img class="drone-img" src="images/x3v2_medical_render.png" alt="X3 V2 Medical Logistics Drone" loading="lazy">
+        <div class="drone-body">
+          <div class="drone-name">X3 V2</div>
+          <div class="drone-sub">Inter-Island &bull; All-Weather Expansion Platform</div>
+          <ul class="drone-specs">
+            <li><span class="spec-label">Flight range (30% reserve)</span><span class="spec-val">1,761 km</span></li>
+            <li><span class="spec-label">Endurance</span><span class="spec-val">27+ hours</span></li>
+            <li><span class="spec-label">Max payload</span><span class="spec-val">5 kg</span></li>
+            <li><span class="spec-label">Operating cost</span><span class="spec-val">$1.42 / km</span></li>
+            <li><span class="spec-label">Weather rating</span><span class="spec-val">IPX5 (all-weather)</span></li>
+          </ul>
+          <div class="drone-badge">Medical logistics &bull; Disaster response &bull; Offshore</div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
